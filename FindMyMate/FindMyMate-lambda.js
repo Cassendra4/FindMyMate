@@ -3,7 +3,8 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 exports.handler = function (event, context, callback) {
     ddb.put({
         TableName: 'hs_user',
-        Item: {
+        
+         Item: {
             contact_number: event.contact_number,
             age: event.age,
             username: event.username,
@@ -21,9 +22,9 @@ exports.handler = function (event, context, callback) {
 
     }, function (err, data) {
         if (err) {
-           callback(err, null);
+            callback(err, null);
         } else {
-             callback(null, data);
+            callback(null, data);
         }
     });
 
