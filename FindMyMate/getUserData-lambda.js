@@ -20,7 +20,4 @@ exports.handler = function (event, context, callback) {
            callback(null, response);
 		}
 	});
-
-
-	callback(null, 'Successfully executed');
 }
